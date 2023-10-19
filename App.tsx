@@ -6,15 +6,12 @@
  */
 import 'react-native-gesture-handler';
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import MyDrawer from './src/navegation/Drawer';
 
 
-function App(){
+function App() {
   return (
-    <NavigationContainer>
-      <MyDrawer/>
-    </NavigationContainer>
+    <MyDrawer />
   );
 }
 

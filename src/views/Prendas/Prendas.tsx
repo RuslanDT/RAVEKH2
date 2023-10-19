@@ -1,7 +1,10 @@
 import React from 'react'
+import { View, Text } from 'react-native';
 
-export function Prendas() {
-    return (
-        <div>Prendas</div>
-    )
+export  const Prendas = () => {
+    return(
+        <View>
+            <Text>Hola</Text>
+        </View>
+    );
 }

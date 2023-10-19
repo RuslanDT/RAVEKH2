@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Button, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import { Prendas } from '../views/Prendas/Prendas';
 
 function HomeScreen({ navigation }) {
     return (
@@ -25,9 +27,12 @@ const Drawer = createDrawerNavigator();
 
 export default function MyDrawer() {
     return (
-        <Drawer.Navigator initialRouteName="Home">
-            <Drawer.Screen name="Home" component={HomeScreen} />
-            <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-        </Drawer.Navigator>
+        <NavigationContainer>
+            <Drawer.Navigator initialRouteName="Home">
+                <Drawer.Screen name="Home" component={HomeScreen} />
+                <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+                <Drawer.Screen name="Prendas" component={Prendas}/>
+            </Drawer.Navigator>
+        </NavigationContainer>
     );
 }
