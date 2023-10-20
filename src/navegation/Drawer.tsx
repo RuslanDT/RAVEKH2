@@ -3,6 +3,7 @@ import { Button, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { Prendas } from '../views/Prendas/Prendas';
+import { Login } from '../views/Login/Login';
 
 function HomeScreen({ navigation }) {
     return (
@@ -15,7 +16,7 @@ function HomeScreen({ navigation }) {
     );
 }
 
-function NotificationsScreen({ navigation }) {
+function NotificationsScreen({ navigation } ) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Button onPress={() => navigation.goBack()} title="Go back home" />
@@ -29,9 +30,10 @@ export default function MyDrawer() {
     return (
         <NavigationContainer>
             <Drawer.Navigator initialRouteName="Home">
-                <Drawer.Screen name="Home" component={HomeScreen} />
+                <Drawer.Screen name="Home" component={HomeScreen}/>
                 <Drawer.Screen name="Notifications" component={NotificationsScreen} />
                 <Drawer.Screen name="Prendas" component={Prendas}/>
+                <Drawer.Screen name="Login" component={Login}/>
             </Drawer.Navigator>
         </NavigationContainer>
     );
